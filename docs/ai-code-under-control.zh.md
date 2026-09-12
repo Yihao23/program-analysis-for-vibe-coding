@@ -3,6 +3,8 @@
 > 灵感来源：Program Analysis 课程讲义 01–09（Jan Reineke, Saarland University）
 > 数据流分析 · 抽象解释 · Widening/Narrowing · SMT · 符号抽象 · 符号/Concolic 执行 · 信息流分析
 
+*English version: [ai-code-under-control.md](ai-code-under-control.md)*
+
 ---
 
 ## 核心论点

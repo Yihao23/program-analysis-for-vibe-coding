@@ -5,7 +5,7 @@
 C++ 精简版 demo，18 个文件。
 
 把《Program Analysis》01–09 讲的概念落成一个可运行的门禁，专门针对 AI agent 生成的代码。
-理论背景见[`docs/ai-code-under-control.zh.md`](docs/ai-code-under-control.zh.md)。18 个文件。
+理论背景见 [`docs/ai-code-under-control.zh.md`](docs/ai-code-under-control.zh.md)（[English](docs/ai-code-under-control.md)）。18 个文件。
 
 ```
 cmake -S . -B build -G Ninja && cmake --build build
@@ -64,11 +64,6 @@ HYPER  超性质 —— 两次运行比对
 
 `gate demo` 跑完会还原文件。想亲眼看：`cp candidates/dedupe_set.hpp app/features/dedupe.hpp && ./build/gate check app/features/dedupe.hpp`，再用 git 或手动还原。
 
-## 已知盲区（诚实清单）
+## License
 
-- `check_arch` 只看 `#include`；前置声明 / dlopen 看不见 → 场景 4 故意打这个盲区，由 HYPER 兜底
-- `functions_of` 是正则 + 括号匹配；参数里带括号的签名会被跳过
-- `check_reduce` 只认归一化后完全相同的函数体；改个局部变量名就能骗过
-- 非干扰只观测账本一个输出
-
-每条都是 Rice 定理的必然。补哪条、补到什么程度，是抽象域的选择 —— 人的工作。
+MIT，见 [LICENSE](LICENSE)。
